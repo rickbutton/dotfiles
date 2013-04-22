@@ -1,0 +1,8 @@
+[core]
+	editor = mate -w
+	excludesfile = ~/.gitignore_global
+[user]
+	name = Rick Button
+	email = me@rickybutton.com
+[diff]
+  external = ~/bin/git-diff-cmd.sh
