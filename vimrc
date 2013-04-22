@@ -17,6 +17,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'scrooloose/nerdtree'
 
 """" COLOR SCHEME """"
 set t_Co=256
@@ -64,3 +65,6 @@ nnoremap <F3> :TagbarToggle<CR>
 """" CtrlP SETUP """"
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+"""" NERDTree SETUP """"
+map <F2> :NERDTreeToggle<CR>
