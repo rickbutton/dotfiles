@@ -4,5 +4,3 @@
 [user]
 	name = Rick Button
 	email = me@rickybutton.com
-[diff]
-  external = ~/bin/git-diff-cmd.sh
