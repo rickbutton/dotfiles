@@ -6,7 +6,8 @@ FILES=( "gitconfig:$HOME/.gitconfig"
         "tmux.conf:$HOME/.tmux.conf"
         "vimrc:$HOME/.vimrc"
         "zshrc:$HOME/.zshrc" 
-        "git_diff_wrapper:$HOME/bin/git_diff_wrapper")
+        "git_diff_wrapper:$HOME/bin/git_diff_wrapper"
+        "vim:$HOME/.vim")
 
 mkdir -p $HOME/bin
 
