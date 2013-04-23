@@ -7,7 +7,8 @@ FILES=( "gitconfig:$HOME/.gitconfig"
         "vimrc:$HOME/.vimrc"
         "zshrc:$HOME/.zshrc" 
         "git_diff_wrapper:$HOME/bin/git_diff_wrapper"
-        "vim:$HOME/.vim")
+        "vim:$HOME/.vim"
+        "upload.py:$HOME/bin/upload.py")
 
 mkdir -p $HOME/bin
 
