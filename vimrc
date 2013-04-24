@@ -12,12 +12,12 @@ Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/xoria256.vim'
 Bundle 'SuperTab'
 Bundle 'majutsushi/tagbar'
-Bundle 'AutoClose'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree'
+Bundle 'Raimondi/delimitMate'
 
 """" COLOR SCHEME """"
 set t_Co=256
@@ -25,6 +25,7 @@ colorscheme xoria256
 
 """" CUSTOM SETTINGS """"
 set nu
+set relativenumber
 set bs=indent,eol,start     " Backspace over everything in insert mode
 syntax on
 set exrc                    " enable per-directory .vimrc files
@@ -33,6 +34,7 @@ set tabstop=2               " tabstop and shiftwidth, indenting
 set shiftwidth=2
 set expandtab
 filetype plugin indent on
+set laststatus=2
 
 """" FILE TYPE SETUP """"
 autocmd FileType make setlocal noexpandtab
@@ -68,3 +70,7 @@ let g:ctrlp_cmd = 'CtrlP'
 
 """" NERDTree SETUP """"
 map <F2> :NERDTreeToggle<CR>
+
+"""" delimitMate SETUP """"
+let g:delimitMate_expand_cr = 1
+let g:delimitMate_expand_space = 1
