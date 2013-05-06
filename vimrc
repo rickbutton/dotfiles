@@ -18,6 +18,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Raimondi/delimitMate'
+Bundle 'jnwhiteh/vim-golang'
 
 """" COLOR SCHEME """"
 set t_Co=256
@@ -33,6 +34,7 @@ set secure                  " disable unsafe commands in local .vimrc files
 set tabstop=2               " tabstop and shiftwidth, indenting
 set shiftwidth=2
 set expandtab
+set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 set laststatus=2
 
