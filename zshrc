@@ -34,7 +34,6 @@ plugins=(git bundler brew gem)
 source $ZSH/oh-my-zsh.sh
 
 alias tmux='TERM=screen-256color-bce tmux'
-alias vim='mvim -v'
 alias valgrind='nocorrect valgrind'
 
 # Customize to your needs...
@@ -47,19 +46,10 @@ eval "$(rbenv init -)"
 # GCC CROSS COMPILER
 export PATH=/usr/local/cross/bin:$PATH
 
-# PYTHON
-export PATH=/usr/local/share/python:$PATH
-
-# ANDROID SDK
-export PATH="$HOME/tools/android-sdk-macosx/tools:$HOME/tools/android-sdk-macosx/platform-tools:$PATH"
-
 #NODE
 export PATH=/usr/local/share/npm/bin:$PATH
 alias node='nocorrect node'
 alias npm='nocorrect npm'
-
-#JAVA
-export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Go Lang
 export GOROOT=/usr/local/go
@@ -70,8 +60,22 @@ export PATH=$GOROOT/bin:$PATH
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# MacTex
-export PATH="/usr/texbin:$PATH"
-
 # Local bin
 export PATH="~/bin/:$PATH"
+
+unamestr=`uname`
+#OSX Specific config
+if [[ "$unamestr" == 'Darwin' ]]; then
+  alias vim='mvim'
+  #JAVA
+  export JAVA_HOME=$(/usr/libexec/java_home)
+
+  # ANDROID SDK
+  export PATH="$HOME/tools/android-sdk-macosx/tools:$HOME/tools/android-sdk-macosx/platform-tools:$PATH"
+
+  # PYTHON
+  export PATH=/usr/local/share/python:$PATH
+elif [[ "$unamestr" == 'Linux' ]]; then
+  #JAVA
+  export JAVA_HOME=/usr/lib/jvm/java-7-oracle
+fi
