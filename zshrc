@@ -36,6 +36,7 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
 alias tmux='TERM=screen-256color-bce tmux'
+DISABLE_AUTO_TITLE=true
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin

@@ -1,0 +1,23 @@
+#!/bin/zsh
+
+NAME="gforge"
+tmux has-session -t $NAME &> /dev/null
+
+if [ $? != 0 ]
+  then
+    cd ~/code/gforge/gforge5
+    tmux new-session -s $NAME -d
+    
+    #vim
+    tmux rename-window 'vim'
+    tmux send-keys 'vim' Enter
+
+    #console
+    tmux new-window -t $NAME -n console
+
+    #logs
+    tmux new-window -t $NAME -n logs
+    tmux send-keys 'cd ~/code/gforge/logs' Enter
+fi
+
+TERM=screen-256color-bce tmux attach-session -t $NAME

@@ -11,7 +11,8 @@ FILES=( "gitconfig:$HOME/.gitconfig"
         "zshrc:$HOME/.zshrc" 
         "git_diff_wrapper:$HOME/bin/git_diff_wrapper"
         "vim:$HOME/.vim"
-        "upload.py:$HOME/bin/upload.py")
+        "upload.py:$HOME/bin/upload.py"
+        "gforge-session:$HOME/bin/gforge-session")
 
 FOLDERS=( "$HOME/bin" )
 
