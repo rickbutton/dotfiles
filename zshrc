@@ -33,8 +33,9 @@ plugins=(git bundler brew gem)
 
 source $ZSH/oh-my-zsh.sh
 
+unsetopt correct_all
+
 alias tmux='TERM=screen-256color-bce tmux'
-alias valgrind='nocorrect valgrind'
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
@@ -48,14 +49,6 @@ export PATH=/usr/local/cross/bin:$PATH
 
 #NODE
 export PATH=/usr/local/share/npm/bin:$PATH
-alias node='nocorrect node'
-alias npm='nocorrect npm'
-
-# Go Lang
-export GOROOT=/usr/local/go
-export GOPATH=~/code/golib:~/code/godev
-export PATH=$GOROOT/bin:$PATH
-#alias go="goproj-go"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -75,7 +68,16 @@ if [[ "$unamestr" == 'Darwin' ]]; then
 
   # PYTHON
   export PATH=/usr/local/share/python:$PATH
+
+  # GO
+  export GOROOT=/usr/local/go
+  export GOPATH=~/code/golib:~/code/godev
+  export PATH=$GOROOT/bin:$PATH
 elif [[ "$unamestr" == 'Linux' ]]; then
   #JAVA
   export JAVA_HOME=/usr/lib/jvm/java-7-oracle
+
+  # Go Lang
+  export GOPATH=~/code/golib:~/code/godev
+  export PATH=~/code/golib/bin:~/code/godev/bin:$PATH
 fi

@@ -19,14 +19,13 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Raimondi/delimitMate'
 Bundle 'jnwhiteh/vim-golang'
-
+Bundle 'Valloric/YouCompleteMe'
 """" COLOR SCHEME """"
 set t_Co=256
 colorscheme xoria256
 
 """" CUSTOM SETTINGS """"
 set nu
-set relativenumber
 set bs=indent,eol,start     " Backspace over everything in insert mode
 syntax on
 set exrc                    " enable per-directory .vimrc files
@@ -34,9 +33,18 @@ set secure                  " disable unsafe commands in local .vimrc files
 set tabstop=2               " tabstop and shiftwidth, indenting
 set shiftwidth=2
 set expandtab
-set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 set laststatus=2
+"""" folding
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
+nnoremap <Space> za
+
+"""" Go setup """"
+au BufRead,BufNewFile *.go set filetype=go
+set rtp+=$GOROOT/misc/vim
 
 """" FILE TYPE SETUP """"
 autocmd FileType make setlocal noexpandtab
@@ -75,4 +83,3 @@ map <F2> :NERDTreeToggle<CR>
 
 """" delimitMate SETUP """"
 let g:delimitMate_expand_cr = 1
-let g:delimitMate_expand_space = 1
