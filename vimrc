@@ -20,6 +20,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Raimondi/delimitMate'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'AfterColors.vim'
+
 """" COLOR SCHEME """"
 set t_Co=256
 colorscheme xoria256
@@ -35,12 +37,12 @@ set shiftwidth=2
 set expandtab
 filetype plugin indent on
 set laststatus=2
+set completeopt=menu
 """" folding
 set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=1
-nnoremap <Space> za
 
 """" Go setup """"
 au BufRead,BufNewFile *.go set filetype=go
@@ -83,3 +85,6 @@ map <F2> :NERDTreeToggle<CR>
 
 """" delimitMate SETUP """"
 let g:delimitMate_expand_cr = 1
+
+"""" YCM SETUP """"
+let g:ycm_confirm_extra_conf = 0
