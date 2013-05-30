@@ -15,6 +15,22 @@ FILES=( "gitconfig:$HOME/.gitconfig"
         "volume.sh:$HOME/bin/volume.sh"
         "gforge-session:$HOME/bin/gforge-session")
 
+unamestr=`uname`
+if [[ "$unamestr" == 'Darwin' ]]; then
+  
+  echo -e -n "\033[1;36mOS is Mac OSX\n"
+elif [[ "$unamestr" == 'Linux' ]]; then
+  FILES+=("Xdefaults:$HOME/.Xdefaults")
+  FILES+=("xmobarrc:$HOME/.xmobarrc")
+  FILES+=("Xmodmap:$HOME/.Xmodmap")
+  FILES+=("xmonad:$HOME/.xmonad")
+  FILES+=("xsessionrc:$HOME/.xsessionrc")
+
+  echo -e -n "\033[1;36mOS is Linux\n"
+fi
+
+echo -e -n "\n"
+
 FOLDERS=( "$HOME/bin" )
 
 echo -e -n "\033[1;36mCreating folders...\n"
