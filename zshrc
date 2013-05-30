@@ -46,7 +46,7 @@ export PATH="$HOME/bin:$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # GCC CROSS COMPILER
-export PATH=/usr/local/cross/bin:$PATH
+export PATH=$PATH:/usr/local/cross/bin
 
 #NODE
 export PATH=/usr/local/share/npm/bin:$PATH
