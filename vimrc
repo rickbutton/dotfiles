@@ -21,6 +21,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'AfterColors.vim'
+Bundle 'kchmck/vim-coffee-script'
 
 """" COLOR SCHEME """"
 set t_Co=256

@@ -74,6 +74,7 @@ if [[ "$unamestr" == 'Darwin' ]]; then
   export GOROOT=/usr/local/go
   export GOPATH=~/code/golib:~/code/godev
   export PATH=$GOROOT/bin:$PATH
+
 elif [[ "$unamestr" == 'Linux' ]]; then
   #JAVA
   export JAVA_HOME=/usr/lib/jvm/java-7-oracle
@@ -81,4 +82,6 @@ elif [[ "$unamestr" == 'Linux' ]]; then
   # Go Lang
   export GOPATH=~/code/golib:~/code/godev
   export PATH=~/code/golib/bin:~/code/godev/bin:$PATH
+
+  . ~/.nvm/nvm.sh
 fi
