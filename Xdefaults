@@ -1,3 +1,4 @@
+URxvt*termName: xterm-256color
 ! black
 URxvt.color0  : #2E2E34343636
 URxvt.color8  : #555557575353
