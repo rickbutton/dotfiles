@@ -22,6 +22,7 @@ Bundle 'jnwhiteh/vim-golang'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'AfterColors.vim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'mhinz/vim-signify'
 
 """" COLOR SCHEME """"
 set t_Co=256
@@ -39,11 +40,15 @@ set expandtab
 filetype plugin indent on
 set laststatus=2
 set completeopt=menu
+set cursorline
 """" folding
 set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=1
+
+set grepprg=zsh\ -c\ 'grep\ -nH\ $*'
+
 
 """" Go setup """"
 au BufRead,BufNewFile *.go set filetype=go
@@ -89,3 +94,6 @@ let g:delimitMate_expand_cr = 1
 
 """" YCM SETUP """"
 let g:ycm_confirm_extra_conf = 0
+
+"""" ECLIM SETUP """"
+let g:EclimCompletionMethod = 'omnifunc'

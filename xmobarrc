@@ -1,17 +1,17 @@
-Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
-, bgColor = "black"
-, fgColor = "grey"
+Config { font = "xft:Droid Sans:size=12"
+, bgColor = "#1f1f20"
+, fgColor = "white"
 , position = Top
 , lowerOnStart = True
-, commands = [ Run Network "enp4s0" ["-L","0","-H","32","--normal","green","--high","red"] 10
+, commands = [ Run Network "enp4s0" ["-t", "Net: <rx>KB <tx>KB", "-L","0","-H","32","--normal","green","--high","red" ] 10
              , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
-             , Run Memory ["-t","Mem: <usedratio>%"] 10
-             , Run Swap [ ] 10
-             , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+             , Run Memory ["-t","Mem: <usedratio>%", "-H", "50", "-L", "0", "--normal", "green", "--high", "red"] 10
+             , Run Date "%a %b %_d %Y %l:%M:%S %p" "date" 10
              , Run Com "~/bin/volume.sh" [] "vol" 1
+             , Run Uptime ["-t", "Up: <days>d <hours>h <minutes>m", "-L", "0", "--normal", "green"] 10
              , Run StdinReader
              ]
 , sepChar = "%"
 , alignSep = "}{"
-, template = "%StdinReader% }{ %cpu% | %memory% * %swap% | %enp4s0%   %vol% | <fc=#ee9a00>%date%</fc>"
+, template = "%StdinReader% }{ %uptime% | %cpu% | %memory% | %enp4s0% | %vol% | <fc=#1793d0>%date%</fc>"
 }

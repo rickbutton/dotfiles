@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-xscreensaver -no-splash &
-xcompmgr -c &
-feh --bg-scale ~/bg.jpg
-xrandr --output CRT1 --primary

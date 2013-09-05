@@ -24,7 +24,7 @@ elif [[ "$unamestr" == 'Linux' ]]; then
   FILES+=("xmobarrc:$HOME/.xmobarrc")
   FILES+=("Xmodmap:$HOME/.Xmodmap")
   FILES+=("xmonad:$HOME/.xmonad")
-  FILES+=("xsessionrc:$HOME/.xsessionrc")
+  FILES+=("xinitrc:$HOME/.xinitrc")
 
   echo -e -n "\033[1;36mOS is Linux\n"
 fi

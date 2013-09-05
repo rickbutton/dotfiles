@@ -77,11 +77,16 @@ if [[ "$unamestr" == 'Darwin' ]]; then
 
 elif [[ "$unamestr" == 'Linux' ]]; then
   #JAVA
-  export JAVA_HOME=/usr/lib/jvm/java-7-oracle
+  export JAVA_HOME=/opt/java
+  export PATH=/opt/java/bin:$PATH
 
   # Go Lang
   export GOPATH=~/code/golib:~/code/godev
   export PATH=~/code/golib/bin:~/code/godev/bin:$PATH
+
+  # Android
+  export PATH=/opt/android-sdk/platform-tools:/opt/android-sdk/tools:$PATH
+  export ANDROID_HOME=/opt/android-sdk
 
   . ~/.nvm/nvm.sh
 fi
