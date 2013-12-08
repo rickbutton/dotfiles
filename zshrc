@@ -29,7 +29,7 @@ ZSH_THEME="rick"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler brew gem)
+plugins=(git bundler brew gem tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,6 +37,7 @@ unsetopt correct_all
 
 alias tmux='TERM=screen-256color-bce tmux'
 DISABLE_AUTO_TITLE=true
+alias tkill='tmux kill-session -t'
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
