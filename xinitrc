@@ -23,4 +23,5 @@ if [ -s ~/.Xmodmap ]; then
     xmodmap ~/.Xmodmap
 fi
 unclutter &
+devmon &
 exec xmonad

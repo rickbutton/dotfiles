@@ -2,3 +2,5 @@
 gf-install
 *.swp
 .vimrc
+*.pyc
+*.swo

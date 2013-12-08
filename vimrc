@@ -23,6 +23,8 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'AfterColors.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'mhinz/vim-signify'
+Bundle 'embear/vim-localvimrc'
+Bundle 'SirVer/ultisnips'
 
 """" COLOR SCHEME """"
 set t_Co=256
@@ -48,6 +50,10 @@ set nofoldenable
 set foldlevel=1
 
 set grepprg=zsh\ -c\ 'grep\ -nH\ $*'
+
+if filereadable(glob("~/.vimrc.local")) 
+    source ~/.vimrc.local
+endif
 
 
 """" Go setup """"
@@ -97,3 +103,9 @@ let g:ycm_confirm_extra_conf = 0
 
 """" ECLIM SETUP """"
 let g:EclimCompletionMethod = 'omnifunc'
+
+"""" LOCAL vimrc SETUP """"
+let g:localvimrc_ask = 0
+
+"""" vim-signify SETUP """"
+let g:signify_sign_overwrite = 0

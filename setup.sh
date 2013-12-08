@@ -9,11 +9,12 @@ FILES=( "gitconfig:$HOME/.gitconfig"
         "tmux.conf:$HOME/.tmux.conf"
         "vimrc:$HOME/.vimrc"
         "zshrc:$HOME/.zshrc" 
-        "git_diff_wrapper:$HOME/bin/git_diff_wrapper"
+        "bin/git_diff_wrapper:$HOME/bin/git_diff_wrapper"
         "vim:$HOME/.vim"
-        "upload.py:$HOME/bin/upload.py"
-        "volume.sh:$HOME/bin/volume.sh"
-        "gforge-session:$HOME/bin/gforge-session")
+        "bin/upload.py:$HOME/bin/upload.py"
+        "bin/volume.sh:$HOME/bin/volume.sh"
+        "bin/t:$HOME/bin/t"
+        "bin/gforge-session:$HOME/bin/gforge-session")
 
 unamestr=`uname`
 if [[ "$unamestr" == 'Darwin' ]]; then
@@ -25,6 +26,9 @@ elif [[ "$unamestr" == 'Linux' ]]; then
   FILES+=("Xmodmap:$HOME/.Xmodmap")
   FILES+=("xmonad:$HOME/.xmonad")
   FILES+=("xinitrc:$HOME/.xinitrc")
+
+  FILES+=("bin/ynab:$HOME/bin/ynab")
+  FILES+=("bin/word:$HOME/bin/word")
 
   echo -e -n "\033[1;36mOS is Linux\n"
 fi

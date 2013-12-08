@@ -1,0 +1,1 @@
+WINEPREFIX=~/.wine wine ~/.wine/drive_c/Program\ Files\ \(x86\)/YNAB\ 4/YNAB\ 4.exe > /dev/null 2>&1

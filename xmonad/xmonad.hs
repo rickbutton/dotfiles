@@ -44,6 +44,7 @@ strippedKeys x = foldr M.delete (keys defaultConfig x) (removeKeys x)
 myKeys x = M.union (strippedKeys x) (M.fromList (addKeys x))
 
 myFocusedBorderColor = "#1793d0"
+myNormalBorderColor = "#1f1f20"
 
 main = do
 xmproc <- spawnPipe "xmobar"
@@ -62,6 +63,7 @@ xmonad $ defaultConfig
   , keys = myKeys
   , modMask = mod4Mask 
   , focusedBorderColor = myFocusedBorderColor
+  , normalBorderColor = myNormalBorderColor
   } `additionalKeys`
   [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
   , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
