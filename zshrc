@@ -89,5 +89,12 @@ elif [[ "$unamestr" == 'Linux' ]]; then
   export PATH=/opt/android-sdk/platform-tools:/opt/android-sdk/tools:$PATH
   export ANDROID_HOME=/opt/android-sdk
 
+  # Arduino
+  export ARDUINO_DIR=$HOME/code/arduino/arduino-1.0.5
+  export ARDMK_DIR=$HOME/code/arduino/Arduino-Makefile
+  export AVR_TOOLS_DIR=$ARDUINO_DIR/hardware/tools/avr
+  export AVRDUDE=$ARDUINO_DIR/hardware/tools/avrdude
+  export AVRDUDE_CONF=$ARDUINO_DIR/hardware/tools/avrdude.conf
+
   . ~/.nvm/nvm.sh
 fi
