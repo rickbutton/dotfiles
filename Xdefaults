@@ -40,6 +40,6 @@ URxvt*secondaryScroll: True
 URxvt*saveLines: 8000
 
 ! clickable links
-URxvt*perl-ext-common : default,matcher
+URxvt*perl-ext-common : default,matcher,clipboard
 URxvt.urlLauncher     : google-chrome
 URxvt.matcher.button  : 1
