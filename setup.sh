@@ -29,6 +29,7 @@ elif [[ "$unamestr" == 'Linux' ]]; then
 
   FILES+=("bin/ynab:$HOME/bin/ynab")
   FILES+=("bin/word:$HOME/bin/word")
+  FILES+=("bin/excel:$HOME/bin/excel")
 
   echo -e -n "\033[1;36mOS is Linux\n"
 fi

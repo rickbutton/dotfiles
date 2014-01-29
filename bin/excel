@@ -1,0 +1,1 @@
+WINEPREFIX=~/.wine_32 WINEARCH=win32 wine ~/.wine_32/drive_c/Program\ Files/Microsoft\ Office/Office14/EXCEL.EXE
